@@ -1,0 +1,3697 @@
+{
+  "data": [
+    {
+      "version": "1.14.3",
+      "achievements": {
+        "story": {
+          "cure_zombie_villager": {
+            "parent": "minecraft:story/enter_the_nether",
+            "display": {
+              "icon": {
+                "item": "minecraft:golden_apple"
+              },
+              "title": "Zombie Doctor",
+              "description": "Weaken and then cure a Zombie Villager",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "cured_zombie": {
+                "trigger": "minecraft:cured_zombie_villager",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "cured_zombie"
+              ]
+            ]
+          },
+          "deflect_arrow": {
+            "parent": "minecraft:story/obtain_armor",
+            "display": {
+              "icon": {
+                "item": "minecraft:shield"
+              },
+              "title": "Not Today, Thank You",
+              "description": "Deflect an arrow with a shield",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "deflected_projectile": {
+                "trigger": "minecraft:entity_hurt_player",
+                "conditions": {
+                  "damage": {
+                    "type": {
+                      "is_projectile": true
+                    },
+                    "blocked": true
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "deflected_projectile"
+              ]
+            ]
+          },
+          "enchant_item": {
+            "parent": "minecraft:story/mine_diamond",
+            "display": {
+              "icon": {
+                "item": "minecraft:enchanted_book"
+              },
+              "title": "Enchanter",
+              "description": "Enchant an item at an Enchanting Table",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "enchanted_item": {
+                "trigger": "minecraft:enchanted_item",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "enchanted_item"
+              ]
+            ]
+          },
+          "enter_the_end": {
+            "parent": "minecraft:story/follow_ender_eye",
+            "display": {
+              "icon": {
+                "item": "minecraft:end_stone"
+              },
+              "title": "The End?",
+              "description": "Enter the End Portal",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "entered_end": {
+                "trigger": "minecraft:changed_dimension",
+                "conditions": {
+                  "to": "minecraft:the_end"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "entered_end"
+              ]
+            ]
+          },
+          "enter_the_nether": {
+            "parent": "minecraft:story/form_obsidian",
+            "display": {
+              "icon": {
+                "item": "minecraft:flint_and_steel"
+              },
+              "title": "We Need to Go Deeper",
+              "description": "Build, light and enter a Nether Portal",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "entered_nether": {
+                "trigger": "minecraft:changed_dimension",
+                "conditions": {
+                  "to": "minecraft:the_nether"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "entered_nether"
+              ]
+            ]
+          },
+          "follow_ender_eye": {
+            "parent": "minecraft:story/enter_the_nether",
+            "display": {
+              "icon": {
+                "item": "minecraft:ender_eye"
+              },
+              "title": "Eye Spy",
+              "description": "Follow an Eye of Ender",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "in_stronghold": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "feature": "stronghold"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "in_stronghold"
+              ]
+            ]
+          },
+          "form_obsidian": {
+            "parent": "minecraft:story/lava_bucket",
+            "display": {
+              "icon": {
+                "item": "minecraft:obsidian"
+              },
+              "title": "Ice Bucket Challenge",
+              "description": "Form and mine a block of Obsidian",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "obsidian": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:obsidian"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "obsidian"
+              ]
+            ]
+          },
+          "iron_tools": {
+            "parent": "minecraft:story/smelt_iron",
+            "display": {
+              "icon": {
+                "item": "minecraft:iron_pickaxe"
+              },
+              "title": "Isn't It Iron Pick",
+              "description": "Upgrade your pickaxe",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "iron_pickaxe": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_pickaxe"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "iron_pickaxe"
+              ]
+            ]
+          },
+          "lava_bucket": {
+            "parent": "minecraft:story/smelt_iron",
+            "display": {
+              "icon": {
+                "item": "minecraft:lava_bucket"
+              },
+              "title": "Hot Stuff",
+              "description": "Fill a bucket with lava",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "lava_bucket": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:lava_bucket"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "lava_bucket"
+              ]
+            ]
+          },
+          "mine_diamond": {
+            "parent": "minecraft:story/iron_tools",
+            "display": {
+              "icon": {
+                "item": "minecraft:diamond"
+              },
+              "title": "Diamonds!",
+              "description": "Acquire diamonds",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "diamond": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:diamond"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "diamond"
+              ]
+            ]
+          },
+          "mine_stone": {
+            "parent": "minecraft:story/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:wooden_pickaxe"
+              },
+              "title": "Stone Age",
+              "description": "Mine stone with your new pickaxe",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "get_stone": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:cobblestone"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "get_stone"
+              ]
+            ]
+          },
+          "obtain_armor": {
+            "parent": "minecraft:story/smelt_iron",
+            "display": {
+              "icon": {
+                "item": "minecraft:iron_chestplate"
+              },
+              "title": "Suit Up",
+              "description": "Protect yourself with a piece of iron armor",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "iron_helmet": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_helmet"
+                    }
+                  ]
+                }
+              },
+              "iron_chestplate": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_chestplate"
+                    }
+                  ]
+                }
+              },
+              "iron_leggings": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_leggings"
+                    }
+                  ]
+                }
+              },
+              "iron_boots": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_boots"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "iron_helmet",
+                "iron_chestplate",
+                "iron_leggings",
+                "iron_boots"
+              ]
+            ]
+          },
+          "root": {
+            "display": {
+              "icon": {
+                "item": "minecraft:grass_block"
+              },
+              "title": "Minecraft",
+              "description": "The heart and story of the game",
+              "frame": "task",
+              "show_toast": false,
+              "announce_to_chat": false,
+              "hidden": false,
+              "background": "minecraft:textures/gui/advancements/backgrounds/stone.png"
+            },
+            "criteria": {
+              "crafting_table": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:crafting_table"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "crafting_table"
+              ]
+            ]
+          },
+          "shiny_gear": {
+            "parent": "minecraft:story/mine_diamond",
+            "display": {
+              "icon": {
+                "item": "minecraft:diamond_chestplate"
+              },
+              "title": "Cover Me With Diamonds",
+              "description": "Diamond armor saves lives",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "diamond_helmet": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:diamond_helmet"
+                    }
+                  ]
+                }
+              },
+              "diamond_chestplate": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:diamond_chestplate"
+                    }
+                  ]
+                }
+              },
+              "diamond_leggings": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:diamond_leggings"
+                    }
+                  ]
+                }
+              },
+              "diamond_boots": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:diamond_boots"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "diamond_helmet",
+                "diamond_chestplate",
+                "diamond_leggings",
+                "diamond_boots"
+              ]
+            ]
+          },
+          "smelt_iron": {
+            "parent": "minecraft:story/upgrade_tools",
+            "display": {
+              "icon": {
+                "item": "minecraft:iron_ingot"
+              },
+              "title": "Acquire Hardware",
+              "description": "Smelt an iron ingot",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "iron": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:iron_ingot"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "iron"
+              ]
+            ]
+          },
+          "upgrade_tools": {
+            "parent": "minecraft:story/mine_stone",
+            "display": {
+              "icon": {
+                "item": "minecraft:stone_pickaxe"
+              },
+              "title": "Getting an Upgrade",
+              "description": "Construct a better pickaxe",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "stone_pickaxe": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:stone_pickaxe"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "stone_pickaxe"
+              ]
+            ]
+          }
+        },
+        "nether": {
+          "all_effects": {
+            "parent": "minecraft:nether/all_potions",
+            "display": {
+              "icon": {
+                "item": "minecraft:bucket"
+              },
+              "title": "How Did We Get Here?",
+              "description": "Have every effect applied at the same time",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": true
+            },
+            "rewards": {
+              "experience": 1000
+            },
+            "criteria": {
+              "all_effects": {
+                "trigger": "minecraft:effects_changed",
+                "conditions": {
+                  "effects": {
+                    "minecraft:dolphins_grace": {},
+                    "minecraft:slow_falling": {},
+                    "minecraft:invisibility": {},
+                    "minecraft:absorption": {},
+                    "minecraft:resistance": {},
+                    "minecraft:bad_omen": {},
+                    "minecraft:jump_boost": {},
+                    "minecraft:mining_fatigue": {},
+                    "minecraft:speed": {},
+                    "minecraft:strength": {},
+                    "minecraft:night_vision": {},
+                    "minecraft:poison": {},
+                    "minecraft:regeneration": {},
+                    "minecraft:wither": {},
+                    "minecraft:conduit_power": {},
+                    "minecraft:slowness": {},
+                    "minecraft:hunger": {},
+                    "minecraft:water_breathing": {},
+                    "minecraft:nausea": {},
+                    "minecraft:hero_of_the_village": {},
+                    "minecraft:glowing": {},
+                    "minecraft:weakness": {},
+                    "minecraft:levitation": {},
+                    "minecraft:blindness": {},
+                    "minecraft:haste": {},
+                    "minecraft:fire_resistance": {}
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "all_effects"
+              ]
+            ]
+          },
+          "all_potions": {
+            "parent": "minecraft:nether/brew_potion",
+            "display": {
+              "icon": {
+                "item": "minecraft:milk_bucket"
+              },
+              "title": "A Furious Cocktail",
+              "description": "Have every potion effect applied at the same time",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "all_effects": {
+                "trigger": "minecraft:effects_changed",
+                "conditions": {
+                  "effects": {
+                    "minecraft:slow_falling": {},
+                    "minecraft:invisibility": {},
+                    "minecraft:resistance": {},
+                    "minecraft:slowness": {},
+                    "minecraft:jump_boost": {},
+                    "minecraft:water_breathing": {},
+                    "minecraft:speed": {},
+                    "minecraft:weakness": {},
+                    "minecraft:strength": {},
+                    "minecraft:night_vision": {},
+                    "minecraft:poison": {},
+                    "minecraft:fire_resistance": {},
+                    "minecraft:regeneration": {}
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "all_effects"
+              ]
+            ]
+          },
+          "brew_potion": {
+            "parent": "minecraft:nether/obtain_blaze_rod",
+            "display": {
+              "icon": {
+                "item": "minecraft:potion"
+              },
+              "title": "Local Brewery",
+              "description": "Brew a potion",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "potion": {
+                "trigger": "minecraft:brewed_potion",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "potion"
+              ]
+            ]
+          },
+          "create_beacon": {
+            "parent": "minecraft:nether/summon_wither",
+            "display": {
+              "icon": {
+                "item": "minecraft:beacon"
+              },
+              "title": "Bring Home the Beacon",
+              "description": "Construct and place a Beacon",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "beacon": {
+                "trigger": "minecraft:construct_beacon",
+                "conditions": {
+                  "level": {
+                    "min": 1
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "beacon"
+              ]
+            ]
+          },
+          "create_full_beacon": {
+            "parent": "minecraft:nether/create_beacon",
+            "display": {
+              "icon": {
+                "item": "minecraft:beacon"
+              },
+              "title": "Beaconator",
+              "description": "Bring a beacon to full power",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "beacon": {
+                "trigger": "minecraft:construct_beacon",
+                "conditions": {
+                  "level": 4
+                }
+              }
+            },
+            "requirements": [
+              [
+                "beacon"
+              ]
+            ]
+          },
+          "fast_travel": {
+            "parent": "minecraft:nether/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:map"
+              },
+              "title": "Subspace Bubble",
+              "description": "Use the Nether to travel 7 km in the Overworld",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "travelled": {
+                "trigger": "minecraft:nether_travel",
+                "conditions": {
+                  "distance": {
+                    "horizontal": {
+                      "min": 7000
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "travelled"
+              ]
+            ]
+          },
+          "find_fortress": {
+            "parent": "minecraft:nether/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:nether_bricks"
+              },
+              "title": "A Terrible Fortress",
+              "description": "Break your way into a Nether Fortress",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "fortress": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "feature": "fortress"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "fortress"
+              ]
+            ]
+          },
+          "get_wither_skull": {
+            "parent": "minecraft:nether/find_fortress",
+            "display": {
+              "icon": {
+                "item": "minecraft:wither_skeleton_skull"
+              },
+              "title": "Spooky Scary Skeleton",
+              "description": "Obtain a Wither Skeleton's skull",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "wither_skull": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:wither_skeleton_skull"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "wither_skull"
+              ]
+            ]
+          },
+          "obtain_blaze_rod": {
+            "parent": "minecraft:nether/find_fortress",
+            "display": {
+              "icon": {
+                "item": "minecraft:blaze_rod"
+              },
+              "title": "Into Fire",
+              "description": "Relieve a Blaze of its rod",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "blaze_rod": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:blaze_rod"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "blaze_rod"
+              ]
+            ]
+          },
+          "return_to_sender": {
+            "parent": "minecraft:nether/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:fire_charge"
+              },
+              "title": "Return to Sender",
+              "description": "Destroy a Ghast with a fireball",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 50
+            },
+            "criteria": {
+              "killed_ghast": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ghast"
+                  },
+                  "killing_blow": {
+                    "is_projectile": true,
+                    "direct_entity": {
+                      "type": "minecraft:fireball"
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "killed_ghast"
+              ]
+            ]
+          },
+          "root": {
+            "display": {
+              "icon": {
+                "item": "minecraft:red_nether_bricks"
+              },
+              "title": "Nether",
+              "description": "Bring summer clothes",
+              "frame": "task",
+              "show_toast": false,
+              "announce_to_chat": false,
+              "hidden": false,
+              "background": "minecraft:textures/gui/advancements/backgrounds/nether.png"
+            },
+            "criteria": {
+              "entered_nether": {
+                "trigger": "minecraft:changed_dimension",
+                "conditions": {
+                  "to": "minecraft:the_nether"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "entered_nether"
+              ]
+            ]
+          },
+          "summon_wither": {
+            "parent": "minecraft:nether/get_wither_skull",
+            "display": {
+              "icon": {
+                "item": "minecraft:nether_star"
+              },
+              "title": "Withering Heights",
+              "description": "Summon the Wither",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "summoned": {
+                "trigger": "minecraft:summoned_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:wither"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "summoned"
+              ]
+            ]
+          },
+          "uneasy_alliance": {
+            "parent": "minecraft:nether/return_to_sender",
+            "display": {
+              "icon": {
+                "item": "minecraft:ghast_tear"
+              },
+              "title": "Uneasy Alliance",
+              "description": "Rescue a Ghast from the Nether, bring it safely home to the Overworld... and then kill it",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "killed_ghast": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ghast",
+                    "location": {
+                      "dimension": "minecraft:overworld"
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "killed_ghast"
+              ]
+            ]
+          }
+        },
+        "end": {
+          "dragon_breath": {
+            "parent": "minecraft:end/kill_dragon",
+            "display": {
+              "icon": {
+                "item": "minecraft:dragon_breath"
+              },
+              "title": "You Need a Mint",
+              "description": "Collect dragon's breath in a glass bottle",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "dragon_breath": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:dragon_breath"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "dragon_breath"
+              ]
+            ]
+          },
+          "dragon_egg": {
+            "parent": "minecraft:end/kill_dragon",
+            "display": {
+              "icon": {
+                "item": "minecraft:dragon_egg"
+              },
+              "title": "The Next Generation",
+              "description": "Hold the Dragon Egg",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "dragon_egg": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:dragon_egg"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "dragon_egg"
+              ]
+            ]
+          },
+          "elytra": {
+            "parent": "minecraft:end/find_end_city",
+            "display": {
+              "icon": {
+                "item": "minecraft:elytra"
+              },
+              "title": "Sky's the Limit",
+              "description": "Find Elytra",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "elytra": {
+                "trigger": "minecraft:inventory_changed",
+                "conditions": {
+                  "items": [
+                    {
+                      "item": "minecraft:elytra"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "elytra"
+              ]
+            ]
+          },
+          "enter_end_gateway": {
+            "parent": "minecraft:end/kill_dragon",
+            "display": {
+              "icon": {
+                "item": "minecraft:ender_pearl"
+              },
+              "title": "Remote Getaway",
+              "description": "Escape the island",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "entered_end_gateway": {
+                "trigger": "minecraft:enter_block",
+                "conditions": {
+                  "block": "minecraft:end_gateway"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "entered_end_gateway"
+              ]
+            ]
+          },
+          "find_end_city": {
+            "parent": "minecraft:end/enter_end_gateway",
+            "display": {
+              "icon": {
+                "item": "minecraft:purpur_block"
+              },
+              "title": "The City at the End of the Game",
+              "description": "Go on in, what could happen?",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "in_city": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "feature": "endcity"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "in_city"
+              ]
+            ]
+          },
+          "kill_dragon": {
+            "parent": "minecraft:end/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:dragon_head"
+              },
+              "title": "Free the End",
+              "description": "Good luck",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "killed_dragon": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ender_dragon"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "killed_dragon"
+              ]
+            ]
+          },
+          "levitate": {
+            "parent": "minecraft:end/find_end_city",
+            "display": {
+              "icon": {
+                "item": "minecraft:shulker_shell"
+              },
+              "title": "Great View From Up Here",
+              "description": "Levitate up 50 blocks from the attacks of a Shulker",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 50
+            },
+            "criteria": {
+              "levitated": {
+                "trigger": "minecraft:levitation",
+                "conditions": {
+                  "distance": {
+                    "y": {
+                      "min": 50
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "levitated"
+              ]
+            ]
+          },
+          "respawn_dragon": {
+            "parent": "minecraft:end/kill_dragon",
+            "display": {
+              "icon": {
+                "item": "minecraft:end_crystal"
+              },
+              "title": "The End... Again...",
+              "description": "Respawn the Ender Dragon",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "summoned_dragon": {
+                "trigger": "minecraft:summoned_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ender_dragon"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "summoned_dragon"
+              ]
+            ]
+          },
+          "root": {
+            "display": {
+              "icon": {
+                "item": "minecraft:end_stone"
+              },
+              "title": "The End",
+              "description": "Or the beginning?",
+              "frame": "task",
+              "show_toast": false,
+              "announce_to_chat": false,
+              "hidden": false,
+              "background": "minecraft:textures/gui/advancements/backgrounds/end.png"
+            },
+            "criteria": {
+              "entered_end": {
+                "trigger": "minecraft:changed_dimension",
+                "conditions": {
+                  "to": "minecraft:the_end"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "entered_end"
+              ]
+            ]
+          }
+        },
+        "husbandry": {
+          "balanced_diet": {
+            "parent": "minecraft:husbandry/plant_seed",
+            "display": {
+              "icon": {
+                "item": "minecraft:apple"
+              },
+              "title": "A Balanced Diet",
+              "description": "Eat everything that is edible, even if it's not good for you",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "apple": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:apple"
+                  }
+                }
+              },
+              "mushroom_stew": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:mushroom_stew"
+                  }
+                }
+              },
+              "bread": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:bread"
+                  }
+                }
+              },
+              "porkchop": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:porkchop"
+                  }
+                }
+              },
+              "cooked_porkchop": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_porkchop"
+                  }
+                }
+              },
+              "golden_apple": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:golden_apple"
+                  }
+                }
+              },
+              "enchanted_golden_apple": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:enchanted_golden_apple"
+                  }
+                }
+              },
+              "cod": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cod"
+                  }
+                }
+              },
+              "salmon": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:salmon"
+                  }
+                }
+              },
+              "tropical_fish": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:tropical_fish"
+                  }
+                }
+              },
+              "pufferfish": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:pufferfish"
+                  }
+                }
+              },
+              "cooked_cod": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_cod"
+                  }
+                }
+              },
+              "cooked_salmon": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_salmon"
+                  }
+                }
+              },
+              "cookie": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cookie"
+                  }
+                }
+              },
+              "melon_slice": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:melon_slice"
+                  }
+                }
+              },
+              "beef": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:beef"
+                  }
+                }
+              },
+              "cooked_beef": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_beef"
+                  }
+                }
+              },
+              "chicken": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:chicken"
+                  }
+                }
+              },
+              "cooked_chicken": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_chicken"
+                  }
+                }
+              },
+              "rotten_flesh": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:rotten_flesh"
+                  }
+                }
+              },
+              "spider_eye": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:spider_eye"
+                  }
+                }
+              },
+              "carrot": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:carrot"
+                  }
+                }
+              },
+              "potato": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:potato"
+                  }
+                }
+              },
+              "baked_potato": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:baked_potato"
+                  }
+                }
+              },
+              "poisonous_potato": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:poisonous_potato"
+                  }
+                }
+              },
+              "golden_carrot": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:golden_carrot"
+                  }
+                }
+              },
+              "pumpkin_pie": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:pumpkin_pie"
+                  }
+                }
+              },
+              "rabbit": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:rabbit"
+                  }
+                }
+              },
+              "cooked_rabbit": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_rabbit"
+                  }
+                }
+              },
+              "rabbit_stew": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:rabbit_stew"
+                  }
+                }
+              },
+              "mutton": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:mutton"
+                  }
+                }
+              },
+              "cooked_mutton": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cooked_mutton"
+                  }
+                }
+              },
+              "chorus_fruit": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:chorus_fruit"
+                  }
+                }
+              },
+              "beetroot": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:beetroot"
+                  }
+                }
+              },
+              "beetroot_soup": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:beetroot_soup"
+                  }
+                }
+              },
+              "dried_kelp": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:dried_kelp"
+                  }
+                }
+              },
+              "suspicious_stew": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:suspicious_stew"
+                  }
+                }
+              },
+              "sweet_berries": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:sweet_berries"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "apple"
+              ],
+              [
+                "mushroom_stew"
+              ],
+              [
+                "bread"
+              ],
+              [
+                "porkchop"
+              ],
+              [
+                "cooked_porkchop"
+              ],
+              [
+                "golden_apple"
+              ],
+              [
+                "enchanted_golden_apple"
+              ],
+              [
+                "cod"
+              ],
+              [
+                "salmon"
+              ],
+              [
+                "tropical_fish"
+              ],
+              [
+                "pufferfish"
+              ],
+              [
+                "cooked_cod"
+              ],
+              [
+                "cooked_salmon"
+              ],
+              [
+                "cookie"
+              ],
+              [
+                "melon_slice"
+              ],
+              [
+                "beef"
+              ],
+              [
+                "cooked_beef"
+              ],
+              [
+                "chicken"
+              ],
+              [
+                "cooked_chicken"
+              ],
+              [
+                "rotten_flesh"
+              ],
+              [
+                "spider_eye"
+              ],
+              [
+                "carrot"
+              ],
+              [
+                "potato"
+              ],
+              [
+                "baked_potato"
+              ],
+              [
+                "poisonous_potato"
+              ],
+              [
+                "golden_carrot"
+              ],
+              [
+                "pumpkin_pie"
+              ],
+              [
+                "rabbit"
+              ],
+              [
+                "cooked_rabbit"
+              ],
+              [
+                "rabbit_stew"
+              ],
+              [
+                "mutton"
+              ],
+              [
+                "cooked_mutton"
+              ],
+              [
+                "chorus_fruit"
+              ],
+              [
+                "beetroot"
+              ],
+              [
+                "beetroot_soup"
+              ],
+              [
+                "dried_kelp"
+              ],
+              [
+                "suspicious_stew"
+              ],
+              [
+                "sweet_berries"
+              ]
+            ]
+          },
+          "break_diamond_hoe": {
+            "parent": "minecraft:husbandry/plant_seed",
+            "display": {
+              "icon": {
+                "item": "minecraft:diamond_hoe"
+              },
+              "title": "Serious Dedication",
+              "description": "Completely use up a diamond hoe, and then reevaluate your life choices",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "broke_hoe": {
+                "trigger": "minecraft:item_durability_changed",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:diamond_hoe"
+                  },
+                  "durability": 0
+                }
+              }
+            },
+            "requirements": [
+              [
+                "broke_hoe"
+              ]
+            ]
+          },
+          "bred_all_animals": {
+            "parent": "minecraft:husbandry/breed_an_animal",
+            "display": {
+              "icon": {
+                "item": "minecraft:golden_carrot"
+              },
+              "title": "Two by Two",
+              "description": "Breed all the animals!",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "minecraft:horse": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:horse"
+                  }
+                }
+              },
+              "minecraft:sheep": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:sheep"
+                  }
+                }
+              },
+              "minecraft:cow": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:cow"
+                  }
+                }
+              },
+              "minecraft:mooshroom": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:mooshroom"
+                  }
+                }
+              },
+              "minecraft:pig": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:pig"
+                  }
+                }
+              },
+              "minecraft:chicken": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:chicken"
+                  }
+                }
+              },
+              "minecraft:wolf": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:wolf"
+                  }
+                }
+              },
+              "minecraft:ocelot": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:ocelot"
+                  }
+                }
+              },
+              "minecraft:rabbit": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:rabbit"
+                  }
+                }
+              },
+              "minecraft:llama": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:llama"
+                  }
+                }
+              },
+              "minecraft:turtle": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:turtle"
+                  }
+                }
+              },
+              "minecraft:cat": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:cat"
+                  }
+                }
+              },
+              "minecraft:panda": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:panda"
+                  }
+                }
+              },
+              "minecraft:fox": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {
+                  "parent": {
+                    "type": "minecraft:fox"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "minecraft:horse"
+              ],
+              [
+                "minecraft:sheep"
+              ],
+              [
+                "minecraft:cow"
+              ],
+              [
+                "minecraft:mooshroom"
+              ],
+              [
+                "minecraft:pig"
+              ],
+              [
+                "minecraft:chicken"
+              ],
+              [
+                "minecraft:wolf"
+              ],
+              [
+                "minecraft:ocelot"
+              ],
+              [
+                "minecraft:rabbit"
+              ],
+              [
+                "minecraft:llama"
+              ],
+              [
+                "minecraft:turtle"
+              ],
+              [
+                "minecraft:cat"
+              ],
+              [
+                "minecraft:panda"
+              ],
+              [
+                "minecraft:fox"
+              ]
+            ]
+          },
+          "breed_an_animal": {
+            "parent": "minecraft:husbandry/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:wheat"
+              },
+              "title": "The Parrots and the Bats",
+              "description": "Breed two animals together",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "bred": {
+                "trigger": "minecraft:bred_animals",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "bred"
+              ]
+            ]
+          },
+          "complete_catalogue": {
+            "parent": "minecraft:husbandry/tame_an_animal",
+            "display": {
+              "icon": {
+                "item": "minecraft:cod"
+              },
+              "title": "A Complete Catalogue",
+              "description": "Tame all cat variants!",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 50
+            },
+            "criteria": {
+              "textures/entity/cat/tabby.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/tabby.png"
+                  }
+                }
+              },
+              "textures/entity/cat/black.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/black.png"
+                  }
+                }
+              },
+              "textures/entity/cat/red.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/red.png"
+                  }
+                }
+              },
+              "textures/entity/cat/siamese.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/siamese.png"
+                  }
+                }
+              },
+              "textures/entity/cat/british_shorthair.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/british_shorthair.png"
+                  }
+                }
+              },
+              "textures/entity/cat/calico.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/calico.png"
+                  }
+                }
+              },
+              "textures/entity/cat/persian.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/persian.png"
+                  }
+                }
+              },
+              "textures/entity/cat/ragdoll.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/ragdoll.png"
+                  }
+                }
+              },
+              "textures/entity/cat/white.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/white.png"
+                  }
+                }
+              },
+              "textures/entity/cat/jellie.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/jellie.png"
+                  }
+                }
+              },
+              "textures/entity/cat/all_black.png": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {
+                  "entity": {
+                    "catType": "minecraft:textures/entity/cat/all_black.png"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "textures/entity/cat/tabby.png"
+              ],
+              [
+                "textures/entity/cat/black.png"
+              ],
+              [
+                "textures/entity/cat/red.png"
+              ],
+              [
+                "textures/entity/cat/siamese.png"
+              ],
+              [
+                "textures/entity/cat/british_shorthair.png"
+              ],
+              [
+                "textures/entity/cat/calico.png"
+              ],
+              [
+                "textures/entity/cat/persian.png"
+              ],
+              [
+                "textures/entity/cat/ragdoll.png"
+              ],
+              [
+                "textures/entity/cat/white.png"
+              ],
+              [
+                "textures/entity/cat/jellie.png"
+              ],
+              [
+                "textures/entity/cat/all_black.png"
+              ]
+            ]
+          },
+          "fishy_business": {
+            "parent": "minecraft:husbandry/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:fishing_rod"
+              },
+              "title": "Fishy Business",
+              "description": "Catch a fish",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "cod": {
+                "trigger": "minecraft:fishing_rod_hooked",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cod"
+                  }
+                }
+              },
+              "tropical_fish": {
+                "trigger": "minecraft:fishing_rod_hooked",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:tropical_fish"
+                  }
+                }
+              },
+              "pufferfish": {
+                "trigger": "minecraft:fishing_rod_hooked",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:pufferfish"
+                  }
+                }
+              },
+              "salmon": {
+                "trigger": "minecraft:fishing_rod_hooked",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:salmon"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "cod",
+                "tropical_fish",
+                "pufferfish",
+                "salmon"
+              ]
+            ]
+          },
+          "plant_seed": {
+            "parent": "minecraft:husbandry/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:wheat"
+              },
+              "title": "A Seedy Place",
+              "description": "Plant a seed and watch it grow",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "wheat": {
+                "trigger": "minecraft:placed_block",
+                "conditions": {
+                  "block": "minecraft:wheat"
+                }
+              },
+              "pumpkin_stem": {
+                "trigger": "minecraft:placed_block",
+                "conditions": {
+                  "block": "minecraft:pumpkin_stem"
+                }
+              },
+              "melon_stem": {
+                "trigger": "minecraft:placed_block",
+                "conditions": {
+                  "block": "minecraft:melon_stem"
+                }
+              },
+              "beetroots": {
+                "trigger": "minecraft:placed_block",
+                "conditions": {
+                  "block": "minecraft:beetroots"
+                }
+              },
+              "nether_wart": {
+                "trigger": "minecraft:placed_block",
+                "conditions": {
+                  "block": "minecraft:nether_wart"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "wheat",
+                "pumpkin_stem",
+                "melon_stem",
+                "beetroots",
+                "nether_wart"
+              ]
+            ]
+          },
+          "root": {
+            "display": {
+              "icon": {
+                "item": "minecraft:hay_block"
+              },
+              "title": "Husbandry",
+              "description": "The world is full of friends and food",
+              "frame": "task",
+              "show_toast": false,
+              "announce_to_chat": false,
+              "hidden": false,
+              "background": "minecraft:textures/gui/advancements/backgrounds/husbandry.png"
+            },
+            "criteria": {
+              "consumed_item": {
+                "trigger": "minecraft:consume_item",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "consumed_item"
+              ]
+            ]
+          },
+          "tactical_fishing": {
+            "parent": "minecraft:husbandry/fishy_business",
+            "display": {
+              "icon": {
+                "item": "minecraft:pufferfish_bucket"
+              },
+              "title": "Tactical Fishing",
+              "description": "Catch a fish... without a fishing rod!",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "cod_bucket": {
+                "trigger": "minecraft:filled_bucket",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:cod_bucket"
+                  }
+                }
+              },
+              "tropical_fish_bucket": {
+                "trigger": "minecraft:filled_bucket",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:tropical_fish_bucket"
+                  }
+                }
+              },
+              "pufferfish_bucket": {
+                "trigger": "minecraft:filled_bucket",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:pufferfish_bucket"
+                  }
+                }
+              },
+              "salmon_bucket": {
+                "trigger": "minecraft:filled_bucket",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:salmon_bucket"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "cod_bucket",
+                "tropical_fish_bucket",
+                "pufferfish_bucket",
+                "salmon_bucket"
+              ]
+            ]
+          },
+          "tame_an_animal": {
+            "parent": "minecraft:husbandry/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:lead"
+              },
+              "title": "Best Friends Forever",
+              "description": "Tame an animal",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "tamed_animal": {
+                "trigger": "minecraft:tame_animal",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "tamed_animal"
+              ]
+            ]
+          }
+        },
+        "adventure": {
+          "adventuring_time": {
+            "parent": "minecraft:adventure/sleep_in_bed",
+            "display": {
+              "icon": {
+                "item": "minecraft:diamond_boots"
+              },
+              "title": "Adventuring Time",
+              "description": "Discover every biome",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 500
+            },
+            "criteria": {
+              "minecraft:birch_forest_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:birch_forest_hills"
+                }
+              },
+              "minecraft:river": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:river"
+                }
+              },
+              "minecraft:swamp": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:swamp"
+                }
+              },
+              "minecraft:desert": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:desert"
+                }
+              },
+              "minecraft:wooded_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:wooded_hills"
+                }
+              },
+              "minecraft:giant_tree_taiga_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:giant_tree_taiga_hills"
+                }
+              },
+              "minecraft:snowy_taiga": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:snowy_taiga"
+                }
+              },
+              "minecraft:badlands": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:badlands"
+                }
+              },
+              "minecraft:forest": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:forest"
+                }
+              },
+              "minecraft:stone_shore": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:stone_shore"
+                }
+              },
+              "minecraft:snowy_tundra": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:snowy_tundra"
+                }
+              },
+              "minecraft:taiga_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:taiga_hills"
+                }
+              },
+              "minecraft:snowy_mountains": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:snowy_mountains"
+                }
+              },
+              "minecraft:wooded_badlands_plateau": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:wooded_badlands_plateau"
+                }
+              },
+              "minecraft:savanna": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:savanna"
+                }
+              },
+              "minecraft:plains": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:plains"
+                }
+              },
+              "minecraft:frozen_river": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:frozen_river"
+                }
+              },
+              "minecraft:giant_tree_taiga": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:giant_tree_taiga"
+                }
+              },
+              "minecraft:snowy_beach": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:snowy_beach"
+                }
+              },
+              "minecraft:jungle_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:jungle_hills"
+                }
+              },
+              "minecraft:jungle_edge": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:jungle_edge"
+                }
+              },
+              "minecraft:mushroom_field_shore": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:mushroom_field_shore"
+                }
+              },
+              "minecraft:mountains": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:mountains"
+                }
+              },
+              "minecraft:desert_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:desert_hills"
+                }
+              },
+              "minecraft:jungle": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:jungle"
+                }
+              },
+              "minecraft:beach": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:beach"
+                }
+              },
+              "minecraft:savanna_plateau": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:savanna_plateau"
+                }
+              },
+              "minecraft:snowy_taiga_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:snowy_taiga_hills"
+                }
+              },
+              "minecraft:badlands_plateau": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:badlands_plateau"
+                }
+              },
+              "minecraft:dark_forest": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:dark_forest"
+                }
+              },
+              "minecraft:taiga": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:taiga"
+                }
+              },
+              "minecraft:birch_forest": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:birch_forest"
+                }
+              },
+              "minecraft:mushroom_fields": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:mushroom_fields"
+                }
+              },
+              "minecraft:wooded_mountains": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:wooded_mountains"
+                }
+              },
+              "minecraft:warm_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:warm_ocean"
+                }
+              },
+              "minecraft:lukewarm_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:lukewarm_ocean"
+                }
+              },
+              "minecraft:cold_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:cold_ocean"
+                }
+              },
+              "minecraft:deep_lukewarm_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:deep_lukewarm_ocean"
+                }
+              },
+              "minecraft:deep_cold_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:deep_cold_ocean"
+                }
+              },
+              "minecraft:deep_frozen_ocean": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:deep_frozen_ocean"
+                }
+              },
+              "minecraft:bamboo_jungle": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:bamboo_jungle"
+                }
+              },
+              "minecraft:bamboo_jungle_hills": {
+                "trigger": "minecraft:location",
+                "conditions": {
+                  "biome": "minecraft:bamboo_jungle_hills"
+                }
+              }
+            },
+            "requirements": [
+              [
+                "minecraft:birch_forest_hills"
+              ],
+              [
+                "minecraft:river"
+              ],
+              [
+                "minecraft:swamp"
+              ],
+              [
+                "minecraft:desert"
+              ],
+              [
+                "minecraft:wooded_hills"
+              ],
+              [
+                "minecraft:giant_tree_taiga_hills"
+              ],
+              [
+                "minecraft:snowy_taiga"
+              ],
+              [
+                "minecraft:badlands"
+              ],
+              [
+                "minecraft:forest"
+              ],
+              [
+                "minecraft:stone_shore"
+              ],
+              [
+                "minecraft:snowy_tundra"
+              ],
+              [
+                "minecraft:taiga_hills"
+              ],
+              [
+                "minecraft:snowy_mountains"
+              ],
+              [
+                "minecraft:wooded_badlands_plateau"
+              ],
+              [
+                "minecraft:savanna"
+              ],
+              [
+                "minecraft:plains"
+              ],
+              [
+                "minecraft:frozen_river"
+              ],
+              [
+                "minecraft:giant_tree_taiga"
+              ],
+              [
+                "minecraft:snowy_beach"
+              ],
+              [
+                "minecraft:jungle_hills"
+              ],
+              [
+                "minecraft:jungle_edge"
+              ],
+              [
+                "minecraft:mushroom_field_shore"
+              ],
+              [
+                "minecraft:mountains"
+              ],
+              [
+                "minecraft:desert_hills"
+              ],
+              [
+                "minecraft:jungle"
+              ],
+              [
+                "minecraft:beach"
+              ],
+              [
+                "minecraft:savanna_plateau"
+              ],
+              [
+                "minecraft:snowy_taiga_hills"
+              ],
+              [
+                "minecraft:badlands_plateau"
+              ],
+              [
+                "minecraft:dark_forest"
+              ],
+              [
+                "minecraft:taiga"
+              ],
+              [
+                "minecraft:birch_forest"
+              ],
+              [
+                "minecraft:mushroom_fields"
+              ],
+              [
+                "minecraft:wooded_mountains"
+              ],
+              [
+                "minecraft:warm_ocean"
+              ],
+              [
+                "minecraft:lukewarm_ocean"
+              ],
+              [
+                "minecraft:cold_ocean"
+              ],
+              [
+                "minecraft:deep_lukewarm_ocean"
+              ],
+              [
+                "minecraft:deep_cold_ocean"
+              ],
+              [
+                "minecraft:deep_frozen_ocean"
+              ],
+              [
+                "minecraft:bamboo_jungle"
+              ],
+              [
+                "minecraft:bamboo_jungle_hills"
+              ]
+            ]
+          },
+          "arbalistic": {
+            "parent": "minecraft:adventure/ol_betsy",
+            "display": {
+              "icon": {
+                "item": "minecraft:crossbow"
+              },
+              "title": "Arbalistic",
+              "description": "Kill five unique mobs with one crossbow shot",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": true
+            },
+            "rewards": {
+              "experience": 85
+            },
+            "criteria": {
+              "arbalistic": {
+                "trigger": "minecraft:killed_by_crossbow",
+                "conditions": {
+                  "victims": [],
+                  "unique_entity_types": 5
+                }
+              }
+            },
+            "requirements": [
+              [
+                "arbalistic"
+              ]
+            ]
+          },
+          "hero_of_the_village": {
+            "parent": "minecraft:adventure/voluntary_exile",
+            "display": {
+              "icon": {
+                "item": "minecraft:white_banner",
+                "nbt": "{BlockEntityTag:{Patterns:[{Color:9,Pattern:\"mr\"},{Color:8,Pattern:\"bs\"},{Color:7,Pattern:\"cs\"},{Color:8,Pattern:\"bo\"},{Color:15,Pattern:\"ms\"},{Color:8,Pattern:\"hh\"},{Color:8,Pattern:\"mc\"},{Color:15,Pattern:\"bo\"}]},display:{Name:'{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}'}}"
+              },
+              "title": "Hero of the Village",
+              "description": "Successfully defend a village from a raid",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": true
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "hero_of_the_village": {
+                "trigger": "minecraft:hero_of_the_village"
+              }
+            },
+            "requirements": [
+              [
+                "hero_of_the_village"
+              ]
+            ]
+          },
+          "kill_all_mobs": {
+            "parent": "minecraft:adventure/kill_a_mob",
+            "display": {
+              "icon": {
+                "item": "minecraft:diamond_sword"
+              },
+              "title": "Monsters Hunted",
+              "description": "Kill one of every hostile monster",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 100
+            },
+            "criteria": {
+              "minecraft:cave_spider": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:cave_spider"
+                  }
+                }
+              },
+              "minecraft:spider": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:spider"
+                  }
+                }
+              },
+              "minecraft:zombie_pigman": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie_pigman"
+                  }
+                }
+              },
+              "minecraft:enderman": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:enderman"
+                  }
+                }
+              },
+              "minecraft:blaze": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:blaze"
+                  }
+                }
+              },
+              "minecraft:creeper": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:creeper"
+                  }
+                }
+              },
+              "minecraft:evoker": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:evoker"
+                  }
+                }
+              },
+              "minecraft:ghast": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ghast"
+                  }
+                }
+              },
+              "minecraft:guardian": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:guardian"
+                  }
+                }
+              },
+              "minecraft:husk": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:husk"
+                  }
+                }
+              },
+              "minecraft:magma_cube": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:magma_cube"
+                  }
+                }
+              },
+              "minecraft:shulker": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:shulker"
+                  }
+                }
+              },
+              "minecraft:silverfish": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:silverfish"
+                  }
+                }
+              },
+              "minecraft:skeleton": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:skeleton"
+                  }
+                }
+              },
+              "minecraft:slime": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:slime"
+                  }
+                }
+              },
+              "minecraft:stray": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:stray"
+                  }
+                }
+              },
+              "minecraft:vindicator": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:vindicator"
+                  }
+                }
+              },
+              "minecraft:witch": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:witch"
+                  }
+                }
+              },
+              "minecraft:wither_skeleton": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:wither_skeleton"
+                  }
+                }
+              },
+              "minecraft:zombie": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie"
+                  }
+                }
+              },
+              "minecraft:zombie_villager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie_villager"
+                  }
+                }
+              },
+              "minecraft:phantom": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:phantom"
+                  }
+                }
+              },
+              "minecraft:drowned": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:drowned"
+                  }
+                }
+              },
+              "minecraft:pillager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:pillager"
+                  }
+                }
+              },
+              "minecraft:ravager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ravager"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "minecraft:cave_spider"
+              ],
+              [
+                "minecraft:spider"
+              ],
+              [
+                "minecraft:zombie_pigman"
+              ],
+              [
+                "minecraft:enderman"
+              ],
+              [
+                "minecraft:blaze"
+              ],
+              [
+                "minecraft:creeper"
+              ],
+              [
+                "minecraft:evoker"
+              ],
+              [
+                "minecraft:ghast"
+              ],
+              [
+                "minecraft:guardian"
+              ],
+              [
+                "minecraft:husk"
+              ],
+              [
+                "minecraft:magma_cube"
+              ],
+              [
+                "minecraft:shulker"
+              ],
+              [
+                "minecraft:silverfish"
+              ],
+              [
+                "minecraft:skeleton"
+              ],
+              [
+                "minecraft:slime"
+              ],
+              [
+                "minecraft:stray"
+              ],
+              [
+                "minecraft:vindicator"
+              ],
+              [
+                "minecraft:witch"
+              ],
+              [
+                "minecraft:wither_skeleton"
+              ],
+              [
+                "minecraft:zombie"
+              ],
+              [
+                "minecraft:zombie_villager"
+              ],
+              [
+                "minecraft:phantom"
+              ],
+              [
+                "minecraft:drowned"
+              ],
+              [
+                "minecraft:pillager"
+              ],
+              [
+                "minecraft:ravager"
+              ]
+            ]
+          },
+          "kill_a_mob": {
+            "parent": "minecraft:adventure/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:iron_sword"
+              },
+              "title": "Monster Hunter",
+              "description": "Kill any hostile monster",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "minecraft:cave_spider": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:cave_spider"
+                  }
+                }
+              },
+              "minecraft:spider": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:spider"
+                  }
+                }
+              },
+              "minecraft:zombie_pigman": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie_pigman"
+                  }
+                }
+              },
+              "minecraft:enderman": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:enderman"
+                  }
+                }
+              },
+              "minecraft:blaze": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:blaze"
+                  }
+                }
+              },
+              "minecraft:creeper": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:creeper"
+                  }
+                }
+              },
+              "minecraft:evoker": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:evoker"
+                  }
+                }
+              },
+              "minecraft:ghast": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ghast"
+                  }
+                }
+              },
+              "minecraft:guardian": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:guardian"
+                  }
+                }
+              },
+              "minecraft:husk": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:husk"
+                  }
+                }
+              },
+              "minecraft:magma_cube": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:magma_cube"
+                  }
+                }
+              },
+              "minecraft:shulker": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:shulker"
+                  }
+                }
+              },
+              "minecraft:silverfish": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:silverfish"
+                  }
+                }
+              },
+              "minecraft:skeleton": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:skeleton"
+                  }
+                }
+              },
+              "minecraft:slime": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:slime"
+                  }
+                }
+              },
+              "minecraft:stray": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:stray"
+                  }
+                }
+              },
+              "minecraft:vindicator": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:vindicator"
+                  }
+                }
+              },
+              "minecraft:witch": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:witch"
+                  }
+                }
+              },
+              "minecraft:wither_skeleton": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:wither_skeleton"
+                  }
+                }
+              },
+              "minecraft:zombie": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie"
+                  }
+                }
+              },
+              "minecraft:zombie_villager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:zombie_villager"
+                  }
+                }
+              },
+              "minecraft:phantom": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:phantom"
+                  }
+                }
+              },
+              "minecraft:drowned": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:drowned"
+                  }
+                }
+              },
+              "minecraft:pillager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:pillager"
+                  }
+                }
+              },
+              "minecraft:ravager": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:ravager"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "minecraft:cave_spider",
+                "minecraft:spider",
+                "minecraft:zombie_pigman",
+                "minecraft:enderman",
+                "minecraft:blaze",
+                "minecraft:creeper",
+                "minecraft:evoker",
+                "minecraft:ghast",
+                "minecraft:guardian",
+                "minecraft:husk",
+                "minecraft:magma_cube",
+                "minecraft:shulker",
+                "minecraft:silverfish",
+                "minecraft:skeleton",
+                "minecraft:slime",
+                "minecraft:stray",
+                "minecraft:vindicator",
+                "minecraft:witch",
+                "minecraft:wither_skeleton",
+                "minecraft:zombie",
+                "minecraft:zombie_villager",
+                "minecraft:phantom",
+                "minecraft:drowned",
+                "minecraft:pillager",
+                "minecraft:ravager"
+              ]
+            ]
+          },
+          "ol_betsy": {
+            "parent": "minecraft:adventure/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:crossbow"
+              },
+              "title": "Ol' Betsy",
+              "description": "Shoot a crossbow",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "shot_crossbow": {
+                "trigger": "minecraft:shot_crossbow",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:crossbow"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "shot_crossbow"
+              ]
+            ]
+          },
+          "root": {
+            "display": {
+              "icon": {
+                "item": "minecraft:map"
+              },
+              "title": "Adventure",
+              "description": "Adventure, exploration and combat",
+              "frame": "task",
+              "show_toast": false,
+              "announce_to_chat": false,
+              "hidden": false,
+              "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+            },
+            "criteria": {
+              "killed_something": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {}
+              },
+              "killed_by_something": {
+                "trigger": "minecraft:entity_killed_player",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "killed_something",
+                "killed_by_something"
+              ]
+            ]
+          },
+          "shoot_arrow": {
+            "parent": "minecraft:adventure/kill_a_mob",
+            "display": {
+              "icon": {
+                "item": "minecraft:bow"
+              },
+              "title": "Take Aim",
+              "description": "Shoot something with a bow and arrow",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "shot_arrow": {
+                "trigger": "minecraft:player_hurt_entity",
+                "conditions": {
+                  "damage": {
+                    "type": {
+                      "is_projectile": true,
+                      "direct_entity": {
+                        "type": "minecraft:arrow"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "shot_arrow"
+              ]
+            ]
+          },
+          "sleep_in_bed": {
+            "parent": "minecraft:adventure/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:red_bed"
+              },
+              "title": "Sweet Dreams",
+              "description": "Change your respawn point",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "slept_in_bed": {
+                "trigger": "minecraft:slept_in_bed"
+              }
+            },
+            "requirements": [
+              [
+                "slept_in_bed"
+              ]
+            ]
+          },
+          "sniper_duel": {
+            "parent": "minecraft:adventure/shoot_arrow",
+            "display": {
+              "icon": {
+                "item": "minecraft:arrow"
+              },
+              "title": "Sniper Duel",
+              "description": "Kill a Skeleton from at least 50 meters away",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 50
+            },
+            "criteria": {
+              "killed_skeleton": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:skeleton",
+                    "distance": {
+                      "horizontal": {
+                        "min": 50
+                      }
+                    }
+                  },
+                  "killing_blow": {
+                    "is_projectile": true
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "killed_skeleton"
+              ]
+            ]
+          },
+          "summon_iron_golem": {
+            "parent": "minecraft:adventure/trade",
+            "display": {
+              "icon": {
+                "item": "minecraft:carved_pumpkin"
+              },
+              "title": "Hired Help",
+              "description": "Summon an Iron Golem to help defend a village",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "summoned_golem": {
+                "trigger": "minecraft:summoned_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "minecraft:iron_golem"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "summoned_golem"
+              ]
+            ]
+          },
+          "throw_trident": {
+            "parent": "minecraft:adventure/kill_a_mob",
+            "display": {
+              "icon": {
+                "item": "minecraft:trident"
+              },
+              "title": "A Throwaway Joke",
+              "description": "Throw a trident at something.\nNote: Throwing away your only weapon is not a good idea.",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "shot_trident": {
+                "trigger": "minecraft:player_hurt_entity",
+                "conditions": {
+                  "damage": {
+                    "type": {
+                      "is_projectile": true,
+                      "direct_entity": {
+                        "type": "minecraft:trident"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "shot_trident"
+              ]
+            ]
+          },
+          "totem_of_undying": {
+            "parent": "minecraft:adventure/kill_a_mob",
+            "display": {
+              "icon": {
+                "item": "minecraft:totem_of_undying"
+              },
+              "title": "Postmortal",
+              "description": "Use a Totem of Undying to cheat death",
+              "frame": "goal",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "used_totem": {
+                "trigger": "minecraft:used_totem",
+                "conditions": {
+                  "item": {
+                    "item": "minecraft:totem_of_undying"
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "used_totem"
+              ]
+            ]
+          },
+          "trade": {
+            "parent": "minecraft:adventure/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:emerald"
+              },
+              "title": "What a Deal!",
+              "description": "Successfully trade with a Villager",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "traded": {
+                "trigger": "minecraft:villager_trade",
+                "conditions": {}
+              }
+            },
+            "requirements": [
+              [
+                "traded"
+              ]
+            ]
+          },
+          "two_birds_one_arrow": {
+            "parent": "minecraft:adventure/ol_betsy",
+            "display": {
+              "icon": {
+                "item": "minecraft:crossbow"
+              },
+              "title": "Two Birds, One Arrow",
+              "description": "Kill two Phantoms with a piercing arrow",
+              "frame": "challenge",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "rewards": {
+              "experience": 65
+            },
+            "criteria": {
+              "two_birds": {
+                "trigger": "minecraft:killed_by_crossbow",
+                "conditions": {
+                  "victims": [
+                    {
+                      "type": "minecraft:phantom"
+                    },
+                    {
+                      "type": "minecraft:phantom"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "two_birds"
+              ]
+            ]
+          },
+          "very_very_frightening": {
+            "parent": "minecraft:adventure/throw_trident",
+            "display": {
+              "icon": {
+                "item": "minecraft:trident"
+              },
+              "title": "Very Very Frightening",
+              "description": "Strike a Villager with lightning",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "struck_villager": {
+                "trigger": "minecraft:channeled_lightning",
+                "conditions": {
+                  "victims": [
+                    {
+                      "type": "minecraft:villager"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "struck_villager"
+              ]
+            ]
+          },
+          "voluntary_exile": {
+            "parent": "minecraft:adventure/root",
+            "display": {
+              "icon": {
+                "item": "minecraft:white_banner",
+                "nbt": "{BlockEntityTag:{Patterns:[{Color:9,Pattern:\"mr\"},{Color:8,Pattern:\"bs\"},{Color:7,Pattern:\"cs\"},{Color:8,Pattern:\"bo\"},{Color:15,Pattern:\"ms\"},{Color:8,Pattern:\"hh\"},{Color:8,Pattern:\"mc\"},{Color:15,Pattern:\"bo\"}]},display:{Name:'{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}'}}"
+              },
+              "title": "Voluntary Exile",
+              "description": "Kill a raid captain.\nMaybe consider staying away from villages for the time being...",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": true
+            },
+            "criteria": {
+              "voluntary_exile": {
+                "trigger": "minecraft:player_killed_entity",
+                "conditions": {
+                  "entity": {
+                    "type": "#minecraft:raiders",
+                    "equipment": {
+                      "head": {
+                        "item": "minecraft:white_banner",
+                        "nbt": "{BlockEntityTag:{Patterns:[{Color:9,Pattern:\"mr\"},{Color:8,Pattern:\"bs\"},{Color:7,Pattern:\"cs\"},{Color:8,Pattern:\"bo\"},{Color:15,Pattern:\"ms\"},{Color:8,Pattern:\"hh\"},{Color:8,Pattern:\"mc\"},{Color:15,Pattern:\"bo\"}]},display:{Name:'{\"color\":\"gold\",\"translate\":\"block.minecraft.ominous_banner\"}'}}"
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "requirements": [
+              [
+                "voluntary_exile"
+              ]
+            ]
+          },
+          "whos_the_pillager_now": {
+            "parent": "minecraft:adventure/ol_betsy",
+            "display": {
+              "icon": {
+                "item": "minecraft:crossbow"
+              },
+              "title": "Who's the Pillager Now?",
+              "description": "Give a Pillager a taste of their own medicine",
+              "frame": "task",
+              "show_toast": true,
+              "announce_to_chat": true,
+              "hidden": false
+            },
+            "criteria": {
+              "kill_pillager": {
+                "trigger": "minecraft:killed_by_crossbow",
+                "conditions": {
+                  "victims": [
+                    {
+                      "type": "minecraft:pillager"
+                    }
+                  ]
+                }
+              }
+            },
+            "requirements": [
+              [
+                "kill_pillager"
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
