@@ -51,7 +51,7 @@ By default, this script translates the title and description for a given advance
 
 The output file should be named "output.json", and should be in your project directory.
 
-Example output files can be found [Contribution guidelines for this project](docs/examples)
+Example output files can be found [here](docs/examples)
 
 # Planned Changes
 
