@@ -40,6 +40,8 @@ In the end, you should have a layout like this inside the "versions" folder in y
     
 You may repeat these steps for as many versions as you want, so long as they all follow this format.
 
+1.14.3 is included by default as a visual representation of the format you need to follow.  You may delete this version if you're not interested in using it.
+
 # Usage
 After setup is complete, the file can be run like any other NodeJS script.
 ```
@@ -51,7 +53,7 @@ By default, this script translates the title and description for a given advance
 
 The output file should be named "output.json", and should be in your project directory.
 
-Example output files can be found [here](docs/examples)
+Example output files can be found [here](examples)
 
 # Planned Changes
 
