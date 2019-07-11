@@ -58,3 +58,6 @@ Example output files can be found [here](docs/examples)
 - [ ] Add support for the pre-1.12 "achievement" system
 - [ ] Automatic version detection, and language file application
 - [ ] Improve stability and make the script more novice friendly
+
+# Notes
+Yeah ik its clunky, I threw it together in an hour or so and it helped make my life easier lol.  take it or leave it
