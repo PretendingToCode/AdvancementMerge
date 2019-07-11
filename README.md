@@ -4,6 +4,7 @@ A script to merge JSON files from extracted Minecraft advancement folders.
 Features:
 
 - Supports most modern versions of Minecraft (1.12+)
+- Supports translation into language of your choice, given you supply the script with a Minecraft language file
 - Requires minimal setup
 
 # Installation
@@ -18,7 +19,7 @@ npm install util
 Be sure the assets, versions, and now node_modules folders exist within your project directory before usage.  The assets folder contains the "en_us.json" language file for 1.14.3.  It is only used as a backup if no other language file is present upon execution.
 
 # Preparation
-This script takes 1 or more advancement folders, and combines them into a single JSON file for easy of access. You're going to want to have these advancement folders on hand before you attempt to run the script.  Some setup is required here to make sure the output file is in the correct format.  
+This script takes one or more advancement folders, and combines them into a single JSON file for easy of access. You're going to want to have these advancement folders on hand before you attempt to run the script.  Some setup is required here to make sure the output file is in the correct format.  
 
 First and foremost, you're going to want to extract the advancement folder from any given version.  To do this, I use [WinRAR](https://www.rarlab.com/).  In modern versions of Minecraft, the advancements folder is located at "version.jar/data/minecraft/advancements"
 
