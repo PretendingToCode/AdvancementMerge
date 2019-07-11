@@ -3,7 +3,7 @@ A script to merge JSON files from extracted Minecraft advancement folders.
 
 Features:
 
-- Supports most of the recent versions of Minecraft (1.12+)
+- Supports most modern versions of Minecraft (1.12+)
 - Requires minimal setup
 
 # Installation
@@ -36,6 +36,7 @@ In the end, you should have a layout like this inside the "versions" folder in y
      - nether
      - story
      - en_us.json (Or other specified language file)
+   - (Other version files like the one above may be included as well)
     
 You may repeat these steps for as many versions as you want, so long as they all follow this format.
 
@@ -49,6 +50,8 @@ node index.js
 By default, this script translates the title and description for a given advancement.  This is why the language file is required.  If you wish to disable this, open the script in a text editor of your choice, and change the "translateStrings" bool to false.
 
 The output file should be named "output.json", and should be in your project directory.
+
+Example output files can be found [Contribution guidelines for this project](docs/examples)
 
 # Planned Changes
 
